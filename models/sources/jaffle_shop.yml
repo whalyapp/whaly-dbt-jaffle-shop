@@ -37,7 +37,7 @@ sources:
           description: Foreign key to the customers table
           tests:
           - relationships:
-              to: ref('customer')
+              to: source('jaffle_shop','customer')
               field: customer_id
         - name: amount
           description: The amount of the payment
@@ -57,7 +57,7 @@ sources:
           tests:
           - not_null
           - relationships:
-              to: ref('customers')
+              to: source('jaffle_shop','customer')
               field: customer_id
         - name: order_date
           description: Date (UTC) that the order was placed
