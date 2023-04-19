@@ -3,6 +3,8 @@ version: 2
 models:
     - name: jaffle_customers
       description: "A transformed version of customers through dbt"
+      meta:
+        expose_in_whaly: true
       columns:
           - name: customer_id
             description: "The primary key for this table"
